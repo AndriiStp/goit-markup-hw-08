@@ -1,0 +1,38 @@
+.about {
+    padding-bottom: 0;
+
+    &__pretitle {
+        display: none;
+    }
+}
+
+.values {
+    display: flex;
+
+    & .item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+
+        @include font(700, 14, 1.14);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include font(null, 14, 1.71);
+
+        color: var(--second-text-color);
+    }
+
+    &__icon {
+        @include flex-all-center;
+        width: 270px;
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: var(--section-bg-color);
+        border-radius: 4px;
+    }
+    
+}

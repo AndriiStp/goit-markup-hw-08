@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    background-color: var(--default-bg-color);
+    color: var(--main-text-color);
+    letter-spacing: 0.03em;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.list {
+    list-style: none;
+}
+
+.item {
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    text-decoration: none;
+}

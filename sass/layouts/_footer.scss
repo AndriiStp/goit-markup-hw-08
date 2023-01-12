@@ -1,0 +1,119 @@
+.footer {
+    background-color: var(--footer-bg-color);
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+    &__position {
+        display: flex;
+    }
+
+    &__logo {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 32px;
+        color: var(--default-bg-color);
+        }
+}
+
+.address {
+    font-style: inherit;
+
+    &__item.item {
+        margin-bottom: 12px;
+    }
+}
+
+.address__contact {
+    display: inline-block;
+    margin: 0;
+    @include font(null, 14, 1.71, null);  
+    color: var(--default-bg-color);
+    transition: color var(--duration) var(--transition-timing);
+
+    &.link:hover,
+    &.link:focus {
+        color: var(--accent-color);
+    }
+
+    &.color {
+        color: var(--footer-text-color);
+    }
+}
+
+.join {
+    margin-top: 12px;
+    margin-left: 70px;
+    width: 206px;
+    height: 80px;
+
+    &__title {
+        text-align: left;
+        color: var(--default-bg-color);
+        @include font(700, 14, 1.14);     
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &__icon {
+        fill: var(--default-bg-color);
+    }
+}
+/* ====================Subscribe =================*/
+
+.subscribe {
+    margin-top: 12px;
+    margin-left: 93px;
+
+    &__title {
+        @extend .join__title;
+        margin-bottom: 20px;
+    }  
+    
+    &__icon {
+        margin-left: 10px;
+    }
+}
+
+.subscribe__input {
+    padding: 15px 16px;
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--footer-bg-color);
+    color: var(--default-bg-color);
+    transition: border var(--duration) var(--transition-timing);
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border: 1px solid var(--accent-color);
+    }
+}
+
+.subscribe__button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 28px;
+    width: 200px;
+    height: 50px;
+    font-family: inherit;
+    @include font(700, 16, 1.88, $ls: 0.06em);
+    color: var(--default-bg-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-style: none;
+    transition: background-color var(--duration) var(--transition-timing);
+
+    &:hover {
+        background-color: #188ce8;
+
+    }
+}

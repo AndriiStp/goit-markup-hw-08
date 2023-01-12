@@ -1,0 +1,42 @@
+.solution__title {
+    margin-bottom: 50px;
+
+    @include font(null, 36, 1.17);   
+    text-align: center;
+    
+}
+
+.direction {
+    display: flex;
+    justify-content: space-between;
+
+    &__thumb {
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+
+    &__thumb::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        background-color: var(--overlay-color);
+        height: 70px;
+        width: 100%;
+        bottom: 0;
+    }
+
+    &__description {
+        position: absolute;
+        bottom: 27px;
+
+        color: var(--default-bg-color);
+        @include font(700, 14, 1.14);      
+        text-transform: uppercase;
+    }
+
+    & .item+.item {
+        margin-left: 30px;
+    }
+}
+

@@ -1,0 +1,82 @@
+.command {
+    background-color: var(--section-bg-color);
+
+    &__title {
+        @extend .solution__title
+    }
+}
+
+.person__list {
+    display: flex;
+}
+
+.person__item {
+        
+    background: var(--default-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+   
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.person__title-box {
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
+   
+
+.person__title {
+    margin-bottom: 10px;
+    @include font(500, 16, 1.19);    
+    text-align: center;
+}
+
+.person__job {
+    @include font(null, 16, 1.19);
+    text-align: center;
+    color: var(--second-text-color);
+}
+
+.person__social {
+    margin-bottom: 30px;
+}
+
+.social {
+    @include flex-all-center;
+    
+    &__item {
+            width: 44px;
+            height: 44px;
+    
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+    } 
+
+    &__icon {
+        fill: var(--soc-icon-fill);
+        transition: fill var(--duration) var(--transition-timing);
+    }
+}
+
+.social__link {
+    @include flex-all-center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: background-color var(--duration) var(--transition-timing);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        fill: var(--default-bg-color);
+    }
+
+    &:hover .social__icon,
+    &:focus .social__icon {
+        fill: var(--default-bg-color);
+    }
+}
