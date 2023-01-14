@@ -286,11 +286,13 @@ button {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .list {
@@ -323,11 +325,21 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
 }
 
 .backdrop {
@@ -738,11 +750,14 @@ img {
 .command {
   background-color: var(--section-bg-color);
 }
-.person__list {
-  display: flex;
+.command__title {
+  margin-bottom: 30px;
 }
 
 .person__item {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 24px;
   background: var(--default-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -771,10 +786,6 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--second-text-color);
-}
-
-.person__social {
-  margin-bottom: 30px;
 }
 
 .social {
