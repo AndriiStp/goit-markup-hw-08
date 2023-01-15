@@ -1,17 +1,35 @@
 @mixin flex-align {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 @mixin flex-all-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@mixin font($fw, $fs, $lh, $ls:0.03em) {
-    font-weight: $fw;
-    font-size: $fs + px;
-    line-height: $lh;
-    letter-spacing: $ls;
+@mixin font($fw, $fs, $lh, $ls: 0.03em) {
+  font-weight: $fw;
+  font-size: $fs + px;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin tel {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }

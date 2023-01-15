@@ -1,44 +1,51 @@
 .hero {
-    width: 1600px;
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/herobg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #c4c4c4;
+  text-align: center;
+
+  &__title {
+    display: block;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url(../images/herobg.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-color: #c4c4c4;
-    text-align: center;
+    max-width: 696px;
+    @include font(900, 44, 1.36, $ls: 0.06em);
+    text-transform: uppercase;
+    color: var(--default-bg-color);
+  }
 
-    &__title {
-        display: block;
-        margin-bottom: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 696px;
-        @include font(900, 44, 1.36, $ls:0.06em);       
-        text-transform: uppercase;
-        color: var(--default-bg-color);
-    }
+  &__button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 24px;
+    font-family: inherit;
+    @include font(700, 16, 1.88, $ls: 0.06em);
+    color: var(--default-bg-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-style: none;
+    transition: background-color var(--duration) var(--transition-timing);
+  }
 
-    &__button {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px 24px;
-        font-family: inherit;
-        @include font(700, 16, 1.88, $ls:0.06em);        
-        color: var(--default-bg-color);
-        background-color: var(--accent-color);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-        border-style: none;
-        transition: background-color var(--duration) var(--transition-timing);
-    }
+  &__button:hover,
+  &__button:focus {
+    background-color: #188ce8;
+  }
 
-    &__button:hover,
-    &__button:focus {
-        background-color: #188ce8;
-    }
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }

@@ -1,99 +1,97 @@
 .header {
-    background-color: var(--default-bg-color);
-    border-bottom: 1px solid #ececec;
+  background-color: var(--default-bg-color);
+  border-bottom: 1px solid #ececec;
 
-    &__nav {
-        @include flex-align;
-    }
+  &__nav {
+    @include flex-align;
+  }
 }
 
 .logo {
-    display: inline-block;    
-    padding-top: 24px;
-    padding-bottom: 25px;
-    font-family: 'Raleway', sans-serif;
-    @include font(null, 26, 1.19, null); 
-    color: var(--logo-color);
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  font-family: 'Raleway', sans-serif;
+  @include font(null, 26, 1.19, null);
+  color: var(--logo-color);
 
-    &__accent {
-        color: var(--accent-color);
-    }
+  &__accent {
+    color: var(--accent-color);
+  }
 }
 
 .navigation__list {
-    display: flex;
-    margin-left: 93px;
-       
+  display: flex;
+  margin-left: 93px;
 }
 
 .navigation__item {
-    position: relative;
+  position: relative;
 
-    &:not(:last-child) {
-        margin-right: 50px;
-    }
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .navigation__link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: inherit;
-    @include font(500, 14, 1.14, $ls: 0.02em);
-    transition: color var(--duration) var(--transition-timing);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: inherit;
+  @include font(500, 14, 1.14, $ls: 0.02em);
+  transition: color var(--duration) var(--transition-timing);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
-    
-    &.current::after {
-        position: absolute;
-        content: '';
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: currentColor;
-    }
-    
-    &.current {
-        color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &.current::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: currentColor;
+  }
+
+  &.current {
+    color: var(--accent-color);
+  }
 }
 
 .contacts {
-    display: flex;
-    margin-left: auto;
+  display: flex;
+  margin-left: auto;
 
-    &__link {
-        @extend .navigation__link
-    }
+  &__link {
+    @extend .navigation__link;
+  }
 
-    &__link:hover,
-    &__link:focus {
-        color: var(--accent-color);
-    }
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
 
-    & .item:not(:last-child) {
-        margin-right: 40px;
-    }
+  & .item:not(:last-child) {
+    margin-right: 40px;
+  }
 
-    &__link {
-        @include flex-align;
-        color: var(--second-text-color);
-        
-    }
+  &__link {
+    @include flex-align;
+    color: var(--second-text-color);
+  }
 
-    &__icon {
-        margin-right: 10px;
-        fill: var(--second-text-color);
-        transition: fill var(--duration) var(--transition-timing)
-    }
+  &__icon {
+    margin-right: 10px;
+    fill: var(--second-text-color);
+    transition: fill var(--duration) var(--transition-timing);
+  }
 
-    &__link:hover &__icon,
-    &__link:focus &__icon {
-        fill: currentColor;
-    }
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: currentColor;
+  }
 }
