@@ -557,8 +557,8 @@ img {
 
 .logo {
   display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.19;
@@ -608,6 +608,26 @@ img {
   color: var(--accent-color);
 }
 
+.navigation__button {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.navigation__button .navigation__close {
+  display: none;
+}
+
+.navigation__button.is-open .navigation__close {
+  display: block;
+}
+
+.navigation__button.is-open .navigation__open {
+  display: none;
+}
+
 .contacts {
   display: flex;
   margin-left: auto;
@@ -633,14 +653,16 @@ img {
 }
 
 .hero {
-  width: 1600px;
+  width: 100%;
+  height: 400px;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-color: #c4c4c4;
   text-align: center;
@@ -650,13 +672,22 @@ img {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 696px;
+  max-width: 360px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--default-bg-color);
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
 }
 .hero__button {
   display: block;
@@ -678,6 +709,20 @@ img {
 .hero__button:hover, .hero__button:focus {
   background-color: #188ce8;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    background-size: contain;
+  }
+}
+
 .about__pretitle {
   display: none;
 }
@@ -991,28 +1036,35 @@ img {
   padding-bottom: 60px;
   padding-top: 60px;
 }
-.footer__position {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .footer__position {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .footer__logo {
+  display: block;
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 32px;
+  padding-bottom: 28px;
   color: var(--default-bg-color);
+  text-align: center;
 }
 
 .address {
   font-style: inherit;
 }
-.address__item.item {
+.address__item {
+  text-align: center;
+}
+.address__item:not(:last-child) {
   margin-bottom: 12px;
 }
-
 .address__contact {
   display: inline-block;
   margin: 0;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.14;
   color: var(--default-bg-color);
   transition: color var(--duration) var(--transition-timing);
 }
@@ -1024,13 +1076,14 @@ img {
 }
 
 .join {
-  margin-top: 12px;
-  margin-left: 70px;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
   width: 206px;
   height: 80px;
 }
 .join__title, .subscribe__title {
-  text-align: left;
+  text-align: center;
   color: var(--default-bg-color);
   font-weight: 700;
   font-size: 14px;
@@ -1048,8 +1101,10 @@ img {
 
 /* ====================Subscribe =================*/
 .subscribe {
-  margin-top: 12px;
-  margin-left: 93px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 60px;
 }
 .subscribe__title {
   margin-bottom: 20px;
@@ -1060,8 +1115,8 @@ img {
 
 .subscribe__input {
   padding: 15px 16px;
-  margin-right: 12px;
-  width: 358px;
+  margin-bottom: 20px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1069,6 +1124,13 @@ img {
   background-color: var(--footer-bg-color);
   color: var(--default-bg-color);
   transition: border var(--duration) var(--transition-timing);
+}
+@media screen and (min-width: 768px) {
+  .subscribe__input {
+    width: 450px;
+    margin-right: 144px;
+    margin-left: 144px;
+  }
 }
 .subscribe__input:hover, .subscribe__input:focus {
   outline: none;
@@ -1078,6 +1140,7 @@ img {
 .subscribe__button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 10px 28px;
   width: 200px;
   height: 50px;

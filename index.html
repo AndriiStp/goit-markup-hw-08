@@ -15,7 +15,7 @@
 </head>   
 <body>
     <!--Header-->
-    <header class="header">
+    <!-- <header class="header">
         <div class="header__nav container">
         <a href="./index.html" class="logo link"><span class="logo__accent">Web</span>Studio</a>
         <nav class="navigation">
@@ -27,6 +27,13 @@
                 <li class="navigation__item">
                     <a href="" class="navigation__link link">Контакти</a></li>
             </ul>
+            <button class="navigation__button is-open button" type="button" aria-expanded="false" open-menu>
+                <svg class="" width="40" height="40" aria-label="Switch mobile menu">
+                    <use class="navigation__close" href="./images/icons.svg#menu-close"></use>
+                    <use class="navigation__open" href="./images/icons.svg#menu-open"></use>
+                </svg>
+            </button>
+
         </nav>
         <ul class="contacts list">
             <li class="item"><a href="mailto:info@devstudio.com" class="contacts__link link">
@@ -42,18 +49,18 @@
             </li>
             </ul>
         </div>
-    </header>
+    </header> -->
     <!--Main-->
     <main>
         <!--Hero-->
-        <!-- <section class="hero section">
+        <section class="hero section">
             <div class="container">
             <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
             <button data-modal-open type="button" class="button hero__button">Замовити послугу</button>
             </div>
-        </section> -->
+        </section>
         <!--About-Hidden h2-->
-        <!-- <section class="about section">
+        <section class="about section">
             <div class="container">
             <h2 class="about__pretitle">About</h2>
             <ul class="values list" >
@@ -83,9 +90,9 @@
                 </li>
             </ul>
             </div>
-        </section> -->
+        </section>
         <!--Solution-->
-        <!-- <section class="solution section">
+        <section class="solution section">
             <div class="container">
             <h2 class="solution__title">Чим ми займаємося</h2>
             <ul class="direction list">
@@ -109,9 +116,9 @@
                 </li>
             </ul>
             </div>
-        </section> -->
+        </section>
         <!--Our command-->
-        <!-- <section class="command section">
+        <section class="command section">
             <div class="container">
         <h2 class="command__title">Наша команда</h2>
         <ul class="person__list list">
@@ -265,9 +272,9 @@
             </li>
         </ul>
         </div>
-        </section> -->
+        </section>
         <!-- CLIENTS -->
-        <!-- <section class="clients section">
+        <section class="clients section">
             <div class="container">
             <h2 class="client__title title">Постійні клієнти</h2>
             <ul class="partner list">
@@ -315,10 +322,10 @@
                 </li>
             </ul>
             </div>
-        </section> -->
+        </section>
     </main>
     <!--Footer-->
-    <!--<footer class="footer">
+    <footer class="footer">
         <div class="container">
         <div class="footer__position">
             <div>
@@ -376,7 +383,7 @@
         </div>
         </div>
       
-    </footer> -->
+    </footer>
 <!-- Modal -->
     <div data-modal class="backdrop is-hidden">
         <div class="modal">
@@ -432,5 +439,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
