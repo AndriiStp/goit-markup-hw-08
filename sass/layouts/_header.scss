@@ -1,6 +1,7 @@
 .header {
   background-color: var(--default-bg-color);
   border-bottom: 1px solid #ececec;
+  height: 80px;
 
   &__nav {
     @include flex-align;
@@ -20,6 +21,11 @@
   }
 
   @include tablet {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @include desktop {
     padding-top: 24px;
     padding-bottom: 25px;
   }
@@ -30,18 +36,15 @@
 
   @include tablet {
     display: block;
-  }
-}
-
-.navigation__list {
-  display: flex;
-
-  @include tablet {
     margin-left: 88px;
   }
   @include desktop {
     margin-left: 93px;
   }
+}
+
+.navigation__list {
+  display: flex;
 }
 .navigation__item {
   position: relative;
@@ -97,18 +100,38 @@
 
 .contacts {
   display: none;
-
   margin-left: auto;
 
   @include tablet {
-    display: flex;
+    display: block;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-left: auto;
   }
 
-  // @include desktop {
-  // }
+  @include desktop {
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
 
   &__link {
+    @include flex-align;
+    color: var(--second-text-color);
     @extend .navigation__link;
+
+    &.first {
+      margin-bottom: 10px;
+
+      @include desktop {
+        margin-bottom: 0;
+      }
+    }
+
+    @include tablet {
+      padding: 0;
+      @include font(500, 12, 1.66, $ls: 0.02em);
+    }
   }
 
   &__link:hover,
@@ -120,15 +143,14 @@
     margin-right: 40px;
   }
 
-  &__link {
-    @include flex-align;
-    color: var(--second-text-color);
-  }
-
   &__icon {
     margin-right: 10px;
     fill: var(--second-text-color);
     transition: fill var(--duration) var(--transition-timing);
+
+    @include tablet {
+      margin-right: 8px;
+    }
   }
 
   &__link:hover &__icon,

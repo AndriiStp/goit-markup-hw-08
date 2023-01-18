@@ -8,6 +8,10 @@
       display: flex;
       flex-wrap: wrap;
     }
+    @include desktop {
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
 
   &__logo {
@@ -15,11 +19,25 @@
 
     padding-top: 0;
     padding-bottom: 0;
-    // margin-bottom: 32px;
-    //   display: inline-block;
-    padding-bottom: 28px;
+    margin-bottom: 28px;
     color: var(--default-bg-color);
     text-align: center;
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+}
+
+.address-box {
+  margin-bottom: 60px;
+
+  @include tablet {
+    margin-left: calc(79px - 15px);
+  }
+  @include desktop {
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -28,20 +46,19 @@
 
   &__item {
     text-align: center;
-  }
-  &__item:not(:last-child) {
-    margin-bottom: 12px;
+    @include desktop {
+      text-align: left;
+    }
   }
 
-  @include tablet {
-    // margin-left: 115px;
+  &__item:not(:last-child) {
+    margin-bottom: 12px;
   }
 }
 
 .address__contact {
   display: inline-block;
   margin: 0;
-  //   @include font(null, 14, 1.71, null);
   @include font(null, 14, 1.14, null);
   color: var(--default-bg-color);
   transition: color var(--duration) var(--transition-timing);
@@ -57,21 +74,30 @@
 }
 
 .join {
-  //   margin-top: 12px;
-  //   margin-left: 70px;
-  margin-top: 60px;
+  margin-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
   width: 206px;
   height: 80px;
 
+  @include tablet {
+    margin-right: calc(89px - 15px);
+  }
+  @include desktop {
+    margin-left: 94px;
+    margin-right: 0;
+  }
+
   &__title {
-    // text-align: left;
     text-align: center;
     color: var(--default-bg-color);
     @include font(700, 14, 1.14);
     text-transform: uppercase;
     margin-bottom: 20px;
+
+    @include desktop {
+      text-align: left;
+    }
   }
 
   &__link {
@@ -88,16 +114,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 60px;
-
-  //   @include tablet {
-  //     margin-right: auto;
-  //     margin-left: auto;
-  //   }
 
   @include desktop {
-    //   margin-top: 12px;
-    //   margin-left: 93px;
+    display: block;
+    margin-left: auto;
   }
 
   &__title {
@@ -112,15 +132,19 @@
 
 .subscribe__input {
   padding: 15px 16px;
-  //   margin-right: 12px;
   margin-bottom: 20px;
   width: 100%;
-  //   width: 358px;
 
   @include tablet {
     width: 450px;
     margin-right: calc(159px - 15px);
     margin-left: calc(159px - 15px);
+  }
+
+  @include desktop {
+    margin-right: 12px;
+    width: 358px;
+    margin-left: 0;
   }
 
   height: 50px;

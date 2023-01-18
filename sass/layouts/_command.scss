@@ -5,20 +5,20 @@
     @extend .solution__title;
     margin-bottom: 30px;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       margin-bottom: 50px;
     }
   }
 }
 
 .person__list {
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: 100%;
     flex-wrap: nowrap;
   }
@@ -36,7 +36,7 @@
     margin-bottom: 30px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: calc((100% - 30px) / 2);
 
     &:nth-child(odd) {
@@ -47,7 +47,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-bottom: 0;
 
     &:not(:last-child) {

@@ -3,7 +3,7 @@
     display: none;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-bottom: 0;
   }
 }
@@ -12,7 +12,7 @@
   &__item {
     width: 100%;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 354px;
     }
   }
@@ -30,7 +30,6 @@
 
   &__text {
     @include font(null, 14, 1.71);
-
     color: var(--second-text-color);
   }
 
@@ -43,7 +42,7 @@
     border-radius: 4px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
 
@@ -58,7 +57,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     &__item {
       width: 270px;
     }
