@@ -10,23 +10,39 @@
 .logo {
   display: inline-block;
   padding-top: 16px;
-  padding-bottom: 16px;
+  padding-bottom: 15px;
   font-family: 'Raleway', sans-serif;
-  @include font(null, 26, 1.19, null);
+  @include font(null, 26, 1.16, null);
   color: var(--logo-color);
 
   &__accent {
     color: var(--accent-color);
   }
 
-  //   padding-top: 24px;
-  //   padding-bottom: 25px;
-}
-.navigation__list {
-  display: flex;
-  margin-left: 93px;
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
+.navigation {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.navigation__list {
+  display: flex;
+
+  @include tablet {
+    margin-left: 88px;
+  }
+  @include desktop {
+    margin-left: 93px;
+  }
+}
 .navigation__item {
   position: relative;
 
@@ -65,28 +81,31 @@
 }
 
 .navigation__button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   display: inline-flex;
   padding: 0;
-  margin: 0;
+  margin-left: auto;
   border: none;
   background-color: transparent;
-}
 
-.navigation__button .navigation__close {
-  display: none;
-}
-
-.navigation__button.is-open .navigation__close {
-  display: block;
-}
-
-.navigation__button.is-open .navigation__open {
-  display: none;
+  @include tablet {
+    display: none;
+  }
 }
 
 .contacts {
-  display: flex;
+  display: none;
+
   margin-left: auto;
+
+  @include tablet {
+    display: flex;
+  }
+
+  // @include desktop {
+  // }
 
   &__link {
     @extend .navigation__link;

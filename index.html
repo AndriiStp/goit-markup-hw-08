@@ -14,10 +14,10 @@
         <link rel="stylesheet" href="./css/main.min.css">
 </head>   
 <body>
-    <!--Header-->
-    <!-- <header class="header">
+    <!-- Header-->
+    <header class="header">
         <div class="header__nav container">
-        <a href="./index.html" class="logo link"><span class="logo__accent">Web</span>Studio</a>
+        <a href="./index.html" class="logo link"><span class="logo__accent">Web</span>Studio</a>        
         <nav class="navigation">
             <ul class="navigation__list list">
                 <li class="navigation__item">
@@ -26,14 +26,7 @@
                     <a href="./portfolio.html" class="navigation__link link">Портфоліо</a></li>
                 <li class="navigation__item">
                     <a href="" class="navigation__link link">Контакти</a></li>
-            </ul>
-            <button class="navigation__button is-open button" type="button" aria-expanded="false" open-menu>
-                <svg class="" width="40" height="40" aria-label="Switch mobile menu">
-                    <use class="navigation__close" href="./images/icons.svg#menu-close"></use>
-                    <use class="navigation__open" href="./images/icons.svg#menu-open"></use>
-                </svg>
-            </button>
-
+            </ul>            
         </nav>
         <ul class="contacts list">
             <li class="item"><a href="mailto:info@devstudio.com" class="contacts__link link">
@@ -48,8 +41,54 @@
                 </svg>+38 096 111 11 11</a>
             </li>
             </ul>
+            <button class="navigation__button button" type="button">
+                <svg class="" width="40" height="40" aria-label="Open mobile menu">
+                    <use class="navigation__open-icon" href="./images/icons.svg#menu-open"></use>
+                </svg>
+            </button>
         </div>
-    </header> -->
+        <div class="mobile-menu is-hidden">
+            <div class="container">                
+                <div class="mobile-menu__content">
+                    <button class="mobile-menu__button" type="button">
+                        <svg width="40" height="40" aria-label="close mobile menu">
+                            <use class="mobile-menu__close-icon" href="./images/icons.svg#menu-close"></use>
+                        </svg>
+                    </button>
+                    <nav class="mobile-nav">
+                        <ul class="mobile-nav__list list">
+                            <li class="mobile-nav__item">
+                                <a href="./index.html" class="mobile-nav__link link current">Студія</a>
+                            </li>
+                            <li class="mobile-nav__item">
+                                <a href="./portfolio.html" class="mobile-nav__link link">Портфоліо</a>
+                            </li>
+                            <li class="mobile-nav__item">
+                                <a href="" class="mobile-nav__link link">Контакти</a>
+                            </li>
+                        </ul>
+                    </nav>                                
+                    <div class="">
+                        <div class="mobile-contacts">
+                        <ul class="mobile-contacts__list list">
+                            <li class="mobile-contacts__item item"><a href="tel:+380961111111" class="mobile-contacts__tel link">+38 096 111
+                                    11 11</a></li>
+                            <li class="mobile-contacts__item item"><a href="mailto:info@devstudio.com"
+                                    class="mobile-contacts__mail link">info@devstudio.com</a></li>
+                        </ul>
+                    
+                        </div>
+                        <ul class="mobile-social__list list">
+                        <li class="mobile-social__item item"><a class="mobile-social__link link" href="" target="_blank">Instagram</a></li>
+                        <li class="mobile-social__item item"><a class="mobile-social__link link" href="" target="_blank">Twitter</a></li>
+                        <li class="mobile-social__item item"><a class="mobile-social__link link" href="" target="_blank">Facebook</a></li>
+                        <li class="mobile-social__item item"><a class="mobile-social__link link" href="" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </header>
     <!--Main-->
     <main>
         <!--Hero-->
@@ -139,8 +178,6 @@
                 <p class="person__job">Product Designer</p>
                 </div>
 
-                
-
                 <ul class="social person__social list">
                     <li class="social__item item">
                         <a href="#" class="social__link link">
@@ -173,7 +210,14 @@
                 </ul>
             </li>
             <li class="person__item item">
-                <img src="./images/repina.jpg" alt="Ольга Рєпіна" width="270" height="260">
+                <picture>
+                    <source srcset="./images/pers2-desk-x1.jpg 1x, ./images/pers2-desk-x2.jpg 2x" media="(min-width:1200px)" />
+                    <source srcset="./images/pers2-tablet-x1.jpg 1x, ./images/pers2-tablet-x2.jpg 2x" media="(min-width:768px)" />
+                    <source srcset="./images/pers2-tel-x1.jpg 1x, ./images/pers2-tel-x2.jpg 2x" media="(min-width:480px)" />
+                    <img srcset="./images/pers2-desk-x1.jpg 1x, ./images/pers2-desk-x2.jpg 2x" src="./images/pers2-desk-x1.jpg"
+                        alt="Ігор Дем'яненко" width="270" height="260">
+                </picture>              
+                
                 <div class="person__title-box">
                 <h3 class="person__title">Ольга Рєпіна</h3>
                 <p class="person__job">Frontend Developer</p>
@@ -210,7 +254,13 @@
                 </ul>
             </li>
             <li class="person__item item">
-                <img src="./images/tarasov.jpg" alt="Микола Тарасов" width="270" height="260">
+                <picture>
+                    <source srcset="./images/pers3-desk-x1.jpg 1x, ./images/pers3-desk-x2.jpg 2x" media="(min-width:1200px)" />
+                    <source srcset="./images/pers3-tablet-x1.jpg 1x, ./images/pers3-tablet-x2.jpg 2x" media="(min-width:768px)" />
+                    <source srcset="./images/pers3-tel-x1.jpg 1x, ./images/pers3-tel-x2.jpg 2x" media="(min-width:480px)" />
+                    <img srcset="./images/pers3-desk-x1.jpg 1x, ./images/pers3-desk-x2.jpg 2x" src="./images/pers3-desk-x1.jpg"
+                        alt="Ігор Дем'яненко" width="270" height="260">
+                </picture>
                 <div class="person__title-box">
                 <h3 class="person__title">Микола Тарасов</h3>
                 <p class="person__job">Marketing</p>
@@ -247,7 +297,13 @@
                 </ul>
             </li>
             <li class="person__item item">
-                <img src="./images/ermakov.jpg" alt="Михайло Єрмаков" width="270" height="260">
+                <picture>
+                    <source srcset="./images/pers4-desk-x1.jpg 1x, ./images/pers4-desk-x2.jpg 2x" media="(min-width:1200px)" />
+                    <source srcset="./images/pers4-tablet-x1.jpg 1x, ./images/pers4-tablet-x2.jpg 2x" media="(min-width:768px)" />
+                    <source srcset="./images/pers4-tel-x1.jpg 1x, ./images/pers4-tel-x2.jpg 2x" media="(min-width:480px)" />
+                    <img srcset="./images/pers4-desk-x1.jpg 1x, ./images/pers4-desk-x2.jpg 2x" src="./images/pers4-desk-x1.jpg"
+                        alt="Ігор Дем'яненко" width="270" height="260">
+                </picture>
                 <div class="person__title-box">
                 <h3 class="person__title">Михайло Єрмаков</h3>
                 <p class="person__job">UI Designer</p>
