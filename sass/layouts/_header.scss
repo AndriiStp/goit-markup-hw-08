@@ -85,7 +85,7 @@
 
 .navigation__button {
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 10px;
   display: inline-flex;
   padding: 0;
@@ -130,7 +130,11 @@
 
     @include tablet {
       padding: 0;
-      @include font(500, 12, 1.66, $ls: 0.02em);
+      @include font(500, 12, 1.17, $ls: 0.02em);
+    }
+
+    @include desktop {
+      @include font(500, 14, 1.14, $ls: 0.02em);
     }
   }
 

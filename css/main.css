@@ -657,7 +657,7 @@ img {
 
 .navigation__button {
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 10px;
   display: inline-flex;
   padding: 0;
@@ -708,7 +708,15 @@ img {
     padding: 0;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.66;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
   }
 }
@@ -906,7 +914,7 @@ img {
   }
 }
 
-.solution__title, .client__title, .command__title {
+.solution__title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
@@ -950,10 +958,17 @@ img {
   background-color: var(--section-bg-color);
 }
 .command__title {
+  text-align: center;
   margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
 }
 @media screen and (min-width: 1200px) {
   .command__title {
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
     margin-bottom: 50px;
   }
 }
@@ -1060,10 +1075,17 @@ img {
 }
 
 .client__title {
+  text-align: center;
   margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
 }
 @media screen and (min-width: 1200px) {
   .client__title {
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
     margin-bottom: 50px;
   }
 }
@@ -1356,7 +1378,7 @@ img {
   border: none;
   padding: 0;
   margin: 0;
-  top: 10px;
+  top: 20px;
   right: 10px;
   transition: fill var(--duration) var(--transition-timing);
 }

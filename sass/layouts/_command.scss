@@ -2,10 +2,12 @@
   background-color: var(--section-bg-color);
 
   &__title {
-    @extend .solution__title;
+    text-align: center;
     margin-bottom: 30px;
+    @include font(700, 28, 1.18, null);
 
     @include desktop {
+      @include font(null, 36, 1.17);
       margin-bottom: 50px;
     }
   }
